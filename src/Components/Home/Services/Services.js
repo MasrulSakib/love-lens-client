@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ServicesItems from './ServicesItems';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
 
@@ -15,8 +16,8 @@ const Services = () => {
         <div className='container mx-auto mt-[300px]'>
             <div>
                 <h2 className='text-4xl font-semibold text-center'>My Services</h2>
-                <p className='w-1/2 mx-auto text-justify'>we offer a range of services tailored to meet your unique needs and vision for your special day. Our goal is to provide you with a seamless and stress-free experience, allowing you to focus on creating unforgettable memories while we take care of capturing them.</p>
-                <div className='my-10'>
+                <p className='w-1/2 mx-auto text-justify mb-12'>we offer a range of services tailored to meet your unique needs and vision for your special day. Our goal is to provide you with a seamless and stress-free experience, allowing you to focus on creating unforgettable memories while we take care of capturing them.</p>
+                <div className='grid md:grid-cols-2 grid-cols-1 container mx-auto gap-10'>
                     {
                         services.map(service => <ServicesItems
                             key={service._id}
@@ -24,7 +25,7 @@ const Services = () => {
                         ></ServicesItems>)
                     }
                 </div>
-                <button className='btn btn-outline btn-error mx-auto my-12'>See All Services</button>
+                <Link to={'/services'}><button className='btn btn-outline btn-error mx-auto my-12'>See All Services</button></Link>
             </div>
         </div>
     );
