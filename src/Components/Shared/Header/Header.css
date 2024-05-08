@@ -11,5 +11,5 @@
     /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(21, 21, 21, 0)), color-stop(100%, rgba(0, 47, 75, 0.5)));
     /* Chrome,Safari4+ */
-    background: linear-gradient(to bottom, #151515 0%, rgba(21, 21, 21, 0) 100%);
+    background: linear-gradient(to top, #151515 0%, rgba(21, 21, 21, 0) 100%);
 }

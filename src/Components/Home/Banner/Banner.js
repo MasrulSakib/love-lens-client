@@ -10,7 +10,7 @@ import headerImg4 from '../../../Assets/NavImg/wedding-trends-04.jpg'
 const Banner = () => {
 
     return (
-        <Carousel className='absolute top-0 -z-50 img-gradient'>
+        <Carousel>
             <div className='h-[1000px]'>
                 <img src={headerImg1} alt='' />
 

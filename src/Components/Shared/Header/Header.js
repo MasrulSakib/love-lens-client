@@ -39,8 +39,8 @@ const Header = () => {
                     <a href="/" className="btn btn-outline btn-error">Get in touch</a>
                 </div>
             </div>
-            <div>
-
+            <div className='-z-50'>
+                <Banner></Banner>
             </div>
         </div>
     );
