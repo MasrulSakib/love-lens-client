@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Reviews from '../Reviews/Reviews';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const Details = () => {
     const [reviews, setReviews] = useState([]);
@@ -16,7 +18,11 @@ const Details = () => {
     return (
         <div className='container mx-auto my-20'>
             <div className="card lg:card-side bg-base-100 shadow-xl ">
-                <figure className='w-1/2'><img src={image} alt="Album" /></figure>
+                <PhotoProvider>
+                    <PhotoView src={image}>
+                        <figure className='w-1/2'><img src={image} alt="Album" /></figure>
+                    </PhotoView>
+                </PhotoProvider>
                 <div className="card-body w-1/2">
                     <div className='flex justify-between'>
                         <h2 className="card-title font-bold text-xl">{title}</h2>
