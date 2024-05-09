@@ -1,7 +1,6 @@
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import React, { createContext, useEffect, useState } from 'react';
 import app from '../Firebase/firebase.init';
-import { GoogleAuthProvider } from 'firebase/auth/cordova';
 
 export const AuthProvider = createContext();
 const auth = getAuth(app);
@@ -13,20 +12,26 @@ const AuthContext = ({ children }) => {
     const [loader, setLoader] = useState(true)
 
     const userSignUp = (email, password) => {
+        setLoader(true)
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
     const userLogin = (email, password) => {
+        setLoader(true)
         return signInWithEmailAndPassword(auth, email, password);
     }
 
     const googleLogin = (googleProvider) => {
+        setLoader(true)
         return signInWithPopup(auth, googleProvider);
     }
+
+
 
     const AuthInfo = {
         users,
         loader,
+        setLoader,
         userSignUp,
         userLogin,
         googleLogin

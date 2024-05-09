@@ -1,14 +1,17 @@
 import React, { useContext } from 'react';
 import Header from '../Shared/Header/Header';
 import login from '../../Assets/Authentication/login.jpg'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthProvider } from '../AuthContext/AuthContext';
 import { GoogleAuthProvider } from 'firebase/auth';
 
 const googleProvider = new GoogleAuthProvider();
 
 const Login = () => {
-    const { userLogin, googleLogin } = useContext(AuthProvider)
+    const { userLogin, googleLogin, setLoader } = useContext(AuthProvider)
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || '/';
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -20,9 +23,12 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                form.reset()
+                navigate(from, { replace: true })
             })
             .catch(error => console.error(error))
-        form.reset()
+            .finally(() => { setLoader(false) })
+
     }
 
     const handleGoogleLogin = () => {

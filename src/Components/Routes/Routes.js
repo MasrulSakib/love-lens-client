@@ -5,6 +5,7 @@ import ShowAllServices from "../Home/Services/ShowAllServices";
 import Details from "../Details/Details";
 import Register from "../Register/Register";
 import Login from "../Login/Login";
+import PrivateRoutes from "./PrivateRoutes";
 
 export const router = createBrowserRouter([
     {
@@ -18,7 +19,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/services',
-                element: <ShowAllServices></ShowAllServices>
+                element: <PrivateRoutes><ShowAllServices></ShowAllServices></PrivateRoutes>
             },
             {
                 path: '/services/:id',

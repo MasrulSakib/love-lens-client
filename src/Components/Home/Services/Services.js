@@ -1,16 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import ServicesItems from './ServicesItems';
 import { Link } from 'react-router-dom';
+import { AuthProvider } from '../../AuthContext/AuthContext';
 
 const Services = () => {
 
     const [services, setServices] = useState([]);
+    const { setLoader } = useContext(AuthProvider)
 
     useEffect(() => {
         fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setServices(data))
-    }, [])
+            .finally(() => setLoader(false))
+
+    }, [setLoader])
 
     return (
         <div className='container mx-auto mt-[300px]'>

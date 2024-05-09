@@ -1,16 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import ServicesItems from './ServicesItems';
 import Banner from '../Banner/Banner';
+import { AuthProvider } from '../../AuthContext/AuthContext';
 
 const ShowAllServices = () => {
 
     const [allServices, setAllServices] = useState([]);
+    const { setLoader } = useContext(AuthProvider)
 
     useEffect(() => {
         fetch('http://localhost:5000/allServices')
             .then(res => res.json())
             .then(data => setAllServices(data))
-    }, [])
+            .finally(() => {
+                setLoader(false)
+            })
+
+    }, [setLoader])
     return (
         <div>
             <Banner></Banner>
