@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../../../Assets/NavImg/logo(1).png'
 import './Header.css'
-import Banner from '../../Home/Banner/Banner';
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
@@ -15,11 +15,11 @@ const Header = () => {
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-none rounded-box w-52">
 
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/">Services</a></li>
-                            <li><a href="/">Blog</a></li>
-                            <li><a href="/">About Us</a></li>
-                            <li><a href="/">Contact Us</a></li>
+                            <li><Link to='/'>Home</Link></li>
+                            <li><Link to='/services'>Services</Link></li>
+                            <li><Link to='/blog'>Blog</Link></li>
+                            <li><Link to='/register'>Sign Up</Link></li>
+                            <li><Link to='/login'>Login</Link></li>
                         </ul>
                     </div>
                     <img src={logo} width={240} alt="" />
@@ -28,19 +28,16 @@ const Header = () => {
                 <div className="navbar-center justify-end hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
 
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/">Services</a></li>
-                        <li><a href="/">Blog</a></li>
-                        <li><a href="/">About Us</a></li>
-                        <li><a href="/">Contact Us</a></li>
+                        <li><Link to='/'>Home</Link></li>
+                        <li><Link to='/services'>Services</Link></li>
+                        <li><Link to='/blog'>Blog</Link></li>
+                        <li><Link to='/register'>Sign Up</Link></li>
+                        <li><Link to='/login'>Login</Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
                     <a href="/" className="btn btn-outline btn-error">Get in touch</a>
                 </div>
-            </div>
-            <div className='-z-50'>
-                <Banner></Banner>
             </div>
         </div>
     );

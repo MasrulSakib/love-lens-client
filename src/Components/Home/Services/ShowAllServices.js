@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ServicesItems from './ServicesItems';
+import Banner from '../Banner/Banner';
 
 const ShowAllServices = () => {
 
@@ -11,13 +12,16 @@ const ShowAllServices = () => {
             .then(data => setAllServices(data))
     }, [])
     return (
-        <div className='grid md:grid-cols-2 grid-cols-1 container mx-auto gap-10'>
-            {
-                allServices.map(service => <ServicesItems
-                    key={service._id}
-                    service={service}
-                ></ServicesItems>)
-            }
+        <div>
+            <Banner></Banner>
+            <div className='grid md:grid-cols-2 grid-cols-1 container mx-auto gap-10 my-20'>
+                {
+                    allServices.map(service => <ServicesItems
+                        key={service._id}
+                        service={service}
+                    ></ServicesItems>)
+                }
+            </div>
         </div>
     );
 };
