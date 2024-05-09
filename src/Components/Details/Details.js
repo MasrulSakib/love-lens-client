@@ -10,10 +10,10 @@ const Details = () => {
     const { image, description, title, price, rating } = serviceDetails;
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch(`http://localhost:5000/reviews/${title}`)
             .then(res => res.json())
             .then(data => setReviews(data))
-    }, [])
+    }, [title])
 
     return (
         <div className='container mx-auto my-20'>

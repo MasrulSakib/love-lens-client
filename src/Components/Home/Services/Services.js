@@ -19,7 +19,7 @@ const Services = () => {
     return (
         <div className='container mx-auto mt-[300px]'>
             <div>
-                <h2 className='text-4xl font-semibold text-center'>My Services</h2>
+                <h2 className='text-4xl font-semibold text-center mb-6'>My Services</h2>
                 <p className='w-1/2 mx-auto text-justify mb-12'>we offer a range of services tailored to meet your unique needs and vision for your special day. Our goal is to provide you with a seamless and stress-free experience, allowing you to focus on creating unforgettable memories while we take care of capturing them.</p>
                 <div className='grid md:grid-cols-2 grid-cols-1 container mx-auto gap-10'>
                     {

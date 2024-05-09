@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../../../Assets/NavImg/logo(1).png'
 import './Header.css'
 import { Link } from 'react-router-dom';
+import { AuthProvider } from '../../AuthContext/AuthContext';
 
 
 const Header = () => {
+    const { users, userLogout } = useContext(AuthProvider)
+
+    const handleLogout = () => {
+        userLogout()
+            .then()
+            .catch(error => console.error(error))
+    }
+
     return (
         <div className='relative'>
             <div className="navbar z-10 bg-transparent text-red-400">
@@ -18,8 +27,20 @@ const Header = () => {
                             <li><Link to='/'>Home</Link></li>
                             <li><Link to='/services'>Services</Link></li>
                             <li><Link to='/blog'>Blog</Link></li>
-                            <li><Link to='/register'>Sign Up</Link></li>
-                            <li><Link to='/login'>Login</Link></li>
+                            {
+                                users?.email ?
+                                    <>
+                                        <li><Link to='/addServices'>Add service</Link></li>
+                                        <li><Link to='/myreviews'>My reviews</Link></li>
+                                        <li><Link onClick={handleLogout}>Log Out</Link></li>
+                                    </>
+                                    :
+                                    <>
+                                        <li><Link to='/register'>Sign Up</Link></li>
+                                        <li><Link to='/login'>Login</Link></li>
+                                    </>
+                            }
+
                         </ul>
                     </div>
                     <img src={logo} width={240} alt="" />
@@ -31,8 +52,19 @@ const Header = () => {
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/services'>Services</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
-                        <li><Link to='/register'>Sign Up</Link></li>
-                        <li><Link to='/login'>Login</Link></li>
+                        {
+                            users?.email ?
+                                <>
+                                    <li><Link to='/addServices'>Add service</Link></li>
+                                    <li><Link to='/myreviews'>My reviews</Link></li>
+                                    <li><Link onClick={handleLogout}>Log Out</Link></li>
+                                </>
+                                :
+                                <>
+                                    <li><Link to='/register'>Sign Up</Link></li>
+                                    <li><Link to='/login'>Login</Link></li>
+                                </>
+                        }
                     </ul>
                 </div>
                 <div className="navbar-end">
