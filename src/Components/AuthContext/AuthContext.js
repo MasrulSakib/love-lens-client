@@ -1,9 +1,12 @@
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged } from 'firebase/auth';
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import React, { createContext, useEffect, useState } from 'react';
 import app from '../Firebase/firebase.init';
+import { GoogleAuthProvider } from 'firebase/auth/cordova';
 
 export const AuthProvider = createContext();
 const auth = getAuth(app);
+
+
 
 const AuthContext = ({ children }) => {
     const [users, setUsers] = useState(null)
@@ -13,10 +16,20 @@ const AuthContext = ({ children }) => {
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
+    const userLogin = (email, password) => {
+        return signInWithEmailAndPassword(auth, email, password);
+    }
+
+    const googleLogin = (googleProvider) => {
+        return signInWithPopup(auth, googleProvider);
+    }
+
     const AuthInfo = {
         users,
         loader,
         userSignUp,
+        userLogin,
+        googleLogin
     }
 
     useEffect(() => {

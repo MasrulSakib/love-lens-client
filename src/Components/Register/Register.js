@@ -7,7 +7,7 @@ import { AuthProvider } from '../AuthContext/AuthContext';
 const Register = () => {
     const { userSignUp } = useContext(AuthProvider)
 
-    const handleSignUp = (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
         const username = form.username.value;
@@ -39,7 +39,7 @@ const Register = () => {
                             <h1 className="text-5xl font-bold">Register now!</h1>
                         </div>
                         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                            <form onSubmit={handleSignUp} className="card-body">
+                            <form onSubmit={handleSubmit} className="card-body">
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Username</span>
