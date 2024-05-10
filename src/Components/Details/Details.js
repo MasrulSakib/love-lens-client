@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Reviews from '../Reviews/Reviews';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
@@ -50,6 +50,9 @@ const Details = () => {
                         ></Reviews>)
                     }
                 </div>
+                <Link to={`/addReview/${title}`}>
+                    <button className='btn btn-outline btn-error'>Add Reviews</button>
+                </Link>
             </div>
         </div>
     );
