@@ -7,6 +7,7 @@ import Register from "../Register/Register";
 import Login from "../Login/Login";
 import PrivateRoutes from "./PrivateRoutes";
 import AddReviews from "../Reviews/AddReviews";
+import MyReviews from "../Reviews/MyReviews";
 
 export const router = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ export const router = createBrowserRouter([
                 path: '/addReview/:title',
                 element: <PrivateRoutes><AddReviews></AddReviews></PrivateRoutes>,
                 loader: ({ params }) => fetch(`http://localhost:5000/addReview/${params.title}`)
+            },
+            {
+                path: '/myreviews',
+                element: <MyReviews></MyReviews>
             }
 
         ],
