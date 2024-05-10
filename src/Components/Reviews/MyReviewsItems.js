@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MyReviewsItems = ({ reviewItem, handleDelete }) => {
 
     const { couple, email, review_title, reviewer_image, title, review, rating, _id } = reviewItem;
+
 
     return (
 
@@ -37,20 +39,7 @@ const MyReviewsItems = ({ reviewItem, handleDelete }) => {
                 <p className="text-left font-normal w-1/2">{review.slice(0, 100)}...</p>
             </th>
             <td>
-                {/* Open the modal using document.getElementById('ID').showModal() method */}
-                <button className="btn btn-outline btn-error" onClick={() => document.getElementById('my_modal_5').showModal()}>Edit</button>
-                <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
-                    <div className="modal-box">
-                        <h3 className="font-bold text-lg">{review_title}</h3>
-                        <p className="py-4">{review}</p>
-                        <div className="modal-action">
-                            <form method="dialog">
-                                {/* if there is a button in form, it will close the modal */}
-                                <button className="btn">Close</button>
-                            </form>
-                        </div>
-                    </div>
-                </dialog>
+                <Link to={`/updateReview/${_id}`}><button className='btn btn-outline btn-ghost btn-sm'>update</button></Link>
             </td>
         </tr>
 
