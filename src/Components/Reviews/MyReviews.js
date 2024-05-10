@@ -12,6 +12,24 @@ const MyReviews = () => {
             .then(data => setReviews(data))
     }, [users?.email])
 
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure, you want to delete this review?')
+        if (proceed) {
+            fetch(`http://localhost:5000/myReviews/${id}`, {
+                method: 'DELETE',
+
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        alert('Deleted successfully');
+                        const remaining = reviews.filter(review => review._id !== id);
+                        setReviews(remaining);
+                    }
+                })
+        }
+    }
+
     return (
         <div>
 
@@ -33,6 +51,8 @@ const MyReviews = () => {
                             <th>Title</th>
                             <th>Rating</th>
                             <th>Reviews</th>
+                            <th>Edit</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -40,6 +60,7 @@ const MyReviews = () => {
                             reviews.map(review => <MyReviewsItems
                                 key={review._id}
                                 reviewItem={review}
+                                handleDelete={handleDelete}
                             ></MyReviewsItems>)
                         }
                     </tbody>

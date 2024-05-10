@@ -30,8 +30,8 @@ const Header = () => {
                             {
                                 users?.email ?
                                     <>
-                                        <li><Link to='/addServices'>Add service</Link></li>
-                                        <li><Link to='/myreviews'>My reviews</Link></li>
+                                        <li><Link to='/addServices'>Add Service</Link></li>
+                                        <li><Link to='/myReviews'>My Reviews</Link></li>
                                         <li><Link onClick={handleLogout}>Log Out</Link></li>
                                     </>
                                     :
@@ -56,7 +56,7 @@ const Header = () => {
                             users?.email ?
                                 <>
                                     <li><Link to='/addServices'>Add service</Link></li>
-                                    <li><Link to='/myreviews'>My reviews</Link></li>
+                                    <li><Link to='/myReviews'>My reviews</Link></li>
                                     <li><Link onClick={handleLogout}>Log Out</Link></li>
                                 </>
                                 :
