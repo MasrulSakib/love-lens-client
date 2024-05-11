@@ -4,9 +4,9 @@
 Love Lens is a full-stack web application designed to provide wedding photography services. Users can browse services, book appointments, and leave reviews for their experiences.
 
 # Features:
-Service Booking: Browse available photography services and book appointments.
-User Reviews: Leave reviews and feedback on the photography services received.
-Secure Authentication: Implements JSON Web Tokens (JWT) for data security and user authentication.
+1. Service Booking: Browse available photography services and book appointments.
+2. User Reviews: Leave reviews and feedback on the photography services received.
+3. Secure Authentication: Implements JSON Web Tokens (JWT) for data security and user authentication.
 
 # Technologies Used
 
