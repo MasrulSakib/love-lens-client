@@ -10,6 +10,7 @@ import AddReviews from "../Reviews/AddReviews";
 import MyReviews from "../Reviews/MyReviews";
 import EditReview from "../Reviews/EditReview";
 import AddServices from "../Home/Services/AddServices";
+import Blog from "../Blog/Blog";
 
 export const router = createBrowserRouter([
     {
@@ -46,7 +47,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/addServices',
-                element: <AddServices></AddServices>
+                element: <PrivateRoutes><AddServices></AddServices></PrivateRoutes>
+            },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
             }
 
         ],

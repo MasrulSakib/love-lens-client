@@ -36,7 +36,7 @@ const EditReview = () => {
 
 
     return (
-        <div className='container mx-auto my-20 min-h-screen'>
+        <div className='container mx-auto my-20'>
             <h2 className='text-center text-3xl font-semibold mb-6'>Update Review</h2>
             <form onSubmit={handleSubmit} className='flex flex-col items-center border border-red-500 rounded-2xl p-20 shadow-xl shadow-red-300 bg-transparent'>
                 <div className='grid w-full mt-6'>

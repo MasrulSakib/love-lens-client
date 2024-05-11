@@ -4,6 +4,7 @@ import login from '../../Assets/Authentication/login.jpg'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthProvider } from '../AuthContext/AuthContext';
 import { GoogleAuthProvider } from 'firebase/auth';
+import Footer from '../Footer/Footer';
 
 const googleProvider = new GoogleAuthProvider();
 
@@ -45,7 +46,7 @@ const Login = () => {
     return (
         <div>
             <Header></Header>
-            <div className='grid grid-cols-1 md:grid-cols-3 mt-20 justify-center container mx-auto'>
+            <div className='grid grid-cols-1 md:grid-cols-3 my-20 justify-center container mx-auto'>
                 <div className='grid col-span-1 items-center justify-end'>
                     <img className='h-[750px]' src={login} alt="" />
                 </div>
@@ -81,6 +82,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

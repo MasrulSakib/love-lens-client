@@ -3,6 +3,7 @@ import register from '../../Assets/Authentication/Register.jpg'
 import Header from '../Shared/Header/Header';
 import { Link } from 'react-router-dom';
 import { AuthProvider } from '../AuthContext/AuthContext';
+import Footer from '../Footer/Footer';
 
 const Register = () => {
     const { userSignUp } = useContext(AuthProvider)
@@ -10,8 +11,8 @@ const Register = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
-        const username = form.username.value;
-        const photo = form.photourl.value;
+        // const username = form.username.value;
+        // const photo = form.photourl.value;
         const email = form.email.value;
         const password = form.password.value;
 
@@ -29,7 +30,7 @@ const Register = () => {
     return (
         <div>
             <Header></Header>
-            <div className='grid grid-cols-1 md:grid-cols-3 mt-20 justify-center container mx-auto'>
+            <div className='grid grid-cols-1 md:grid-cols-3 my-20 justify-center container mx-auto'>
                 <div className='grid col-span-1 items-center justify-end'>
                     <img className='h-[750px]' src={register} alt="" />
                 </div>
@@ -73,6 +74,7 @@ const Register = () => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
 
     );
