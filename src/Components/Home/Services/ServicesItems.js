@@ -38,7 +38,7 @@ const ServicesItems = ({ service }) => {
                 <p className=' text-left'>{description.slice(0, 150)}...</p>
                 <div className='flex items-center justify-between'>
                     <button onClick={handleAddToCart} className=' font-semibold btn btn-ghost btn-outline btn-sm'>Price:{price}</button>
-                    <Link to={`/services/${_id}`}><button className="btn btn-error btn-sm">Details</button></Link>
+                    <Link to={`/services/${_id}`}><button className="btn btn-error btn-outline btn-sm">Details</button></Link>
                 </div>
             </div>
         </div>

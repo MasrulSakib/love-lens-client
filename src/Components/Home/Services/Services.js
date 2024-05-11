@@ -29,7 +29,7 @@ const Services = () => {
                         ></ServicesItems>)
                     }
                 </div>
-                <Link to={'/services'}><button className='btn btn-outline btn-error mx-auto my-12'>See All Services</button></Link>
+                <Link to={'/services'}><button className='btn btn-outline btn-ghost mx-auto my-12'>See All Services</button></Link>
             </div>
         </div>
     );

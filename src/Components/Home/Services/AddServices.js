@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 const AddServices = () => {
     const [cartItems, setCartItems] = useState([]);
@@ -68,7 +67,7 @@ const AddServices = () => {
                                 </td>
 
                                 <th>
-                                    <button className="btn btn-ghost">Purchase</button>
+                                    <button className="btn btn-outline btn-sm btn-ghost">Purchase</button>
                                 </th>
                             </tr>
                         ))}
