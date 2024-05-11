@@ -3,9 +3,21 @@ import { Link } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 
+
 const ServicesItems = ({ service }) => {
 
     const { _id, image, description, title, price } = service;
+
+    const handleAddToCart = () => {
+        // Check if item is already in localStorage
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        if (!cartItems.find(item => item._id === _id)) {
+            alert('Service added successfully')
+            cartItems.push({ _id, title, price, image, description });
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        }
+    };
+
     return (
 
         <div className="card lg:card-side bg-base-100 shadow-xl">
@@ -22,8 +34,8 @@ const ServicesItems = ({ service }) => {
                 </div>
                 <p className=' text-left'>{description.slice(0, 150)}...</p>
                 <div className='flex items-center justify-between'>
-                    <span className=' font-semibold text-xl'>Price:{price}</span>
-                    <Link to={`/services/${_id}`}><button className="btn btn-error">Details</button></Link>
+                    <button onClick={handleAddToCart} className=' font-semibold btn btn-ghost btn-outline btn-sm'>Price:{price}</button>
+                    <Link to={`/services/${_id}`}><button className="btn btn-error btn-sm">Details</button></Link>
                 </div>
             </div>
         </div>

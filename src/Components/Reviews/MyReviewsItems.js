@@ -25,14 +25,14 @@ const MyReviewsItems = ({ reviewItem, handleDelete }) => {
                     </div>
                     <div>
                         <div className="font-bold">{couple}</div>
-                        <div className="text-sm opacity-50">{title}</div>
+                        <div className="text-sm opacity-50">{email}</div>
                     </div>
                 </div>
             </td>
             <td>
                 {review_title}
                 <br />
-                <span className="badge badge-ghost badge-sm">{email}</span>
+                <span className="badge badge-ghost badge-sm">{title}</span>
             </td>
             <td>{rating}</td>
             <th>

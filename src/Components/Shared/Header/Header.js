@@ -24,20 +24,20 @@ const Header = () => {
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-none rounded-box w-52">
 
-                            <li><Link to='/'>Home</Link></li>
-                            <li><Link to='/services'>Services</Link></li>
-                            <li><Link to='/blog'>Blog</Link></li>
+                            <li><Link className=' font-semibold' to='/'>Home</Link></li>
+                            <li><Link className=' font-semibold' to='/services'>Services</Link></li>
+                            <li><Link className=' font-semibold' to='/blog'>Blog</Link></li>
                             {
                                 users?.email ?
                                     <>
-                                        <li><Link to='/addServices'>Add Service</Link></li>
-                                        <li><Link to='/myReviews'>My Reviews</Link></li>
-                                        <li><Link onClick={handleLogout}>Log Out</Link></li>
+                                        <li><Link className=' font-semibold' to='/addServices'>Services Cart</Link></li>
+                                        <li><Link className=' font-semibold' to='/myReviews'>My Reviews</Link></li>
+                                        <li><Link className=' font-semibold' onClick={handleLogout}>Log Out</Link></li>
                                     </>
                                     :
                                     <>
-                                        <li><Link to='/register'>Sign Up</Link></li>
-                                        <li><Link to='/login'>Login</Link></li>
+                                        <li><Link className=' font-semibold' to='/register'>Sign Up</Link></li>
+                                        <li><Link className=' font-semibold' to='/login'>Login</Link></li>
                                     </>
                             }
 
@@ -49,20 +49,20 @@ const Header = () => {
                 <div className="navbar-center justify-end hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
 
-                        <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/services'>Services</Link></li>
-                        <li><Link to='/blog'>Blog</Link></li>
+                        <li><Link className=' font-semibold' to='/'>Home</Link></li>
+                        <li><Link className=' font-semibold' to='/services'>Services</Link></li>
+                        <li><Link className=' font-semibold' to='/blog'>Blog</Link></li>
                         {
                             users?.email ?
                                 <>
-                                    <li><Link to='/addServices'>Add service</Link></li>
-                                    <li><Link to='/myReviews'>My reviews</Link></li>
-                                    <li><Link onClick={handleLogout}>Log Out</Link></li>
+                                    <li><Link className=' font-semibold' to='/addServices'>Services Cart</Link></li>
+                                    <li><Link className=' font-semibold' to='/myReviews'>My reviews</Link></li>
+                                    <li><Link className=' font-semibold' onClick={handleLogout}>Log Out</Link></li>
                                 </>
                                 :
                                 <>
-                                    <li><Link to='/register'>Sign Up</Link></li>
-                                    <li><Link to='/login'>Login</Link></li>
+                                    <li><Link className=' font-semibold' to='/register'>Sign Up</Link></li>
+                                    <li><Link className=' font-semibold' to='/login'>Login</Link></li>
                                 </>
                         }
                     </ul>
