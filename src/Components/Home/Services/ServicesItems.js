@@ -16,6 +16,9 @@ const ServicesItems = ({ service }) => {
             cartItems.push({ _id, title, price, image, description });
             localStorage.setItem('cartItems', JSON.stringify(cartItems));
         }
+        else {
+            alert('Service already exist')
+        }
     };
 
     return (

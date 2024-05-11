@@ -19,7 +19,7 @@ const AddServices = () => {
     };
 
     return (
-        <div className='container mx-auto my-20'>
+        <div className='container mx-auto my-20 min-h-screen'>
             <h2 className='my-10 font-bold text-3xl'>Your Selected Services</h2>
             {cartItems.length > 0 ? (
                 <table className="table">

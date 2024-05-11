@@ -41,7 +41,7 @@ const MyReviews = () => {
                     <h2 className="text-3xl font-semibold my-20">Total reviews added: {reviews.length}</h2>
             }
 
-            <div className="container mx-auto">
+            <div className="container mx-auto my-20 min-h-screen">
                 <table className="table">
                     {/* head */}
                     <thead>
