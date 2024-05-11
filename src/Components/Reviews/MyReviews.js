@@ -8,7 +8,7 @@ const MyReviews = () => {
     const [reviews, setReviews] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myReviews?email=${users?.email}`, {
+        fetch(`https://love-lens-server.vercel.app/myReviews?email=${users?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('Lens-Token')}`
             }
@@ -25,7 +25,7 @@ const MyReviews = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete this review?')
         if (proceed) {
-            fetch(`http://localhost:5000/myReviews/${id}`, {
+            fetch(`https://love-lens-server.vercel.app/myReviews/${id}`, {
                 method: 'DELETE',
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('Lens-Token')}`

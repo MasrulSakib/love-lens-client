@@ -17,7 +17,7 @@ const EditReview = () => {
             review,
         }
 
-        fetch(`http://localhost:5000/updateReview/${_id}`, {
+        fetch(`https://love-lens-server.vercel.app/updateReview/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',

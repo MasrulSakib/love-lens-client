@@ -29,12 +29,12 @@ export const router = createBrowserRouter([
             {
                 path: '/services/:id',
                 element: <Details></Details>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://love-lens-server.vercel.app/services/${params.id}`)
             },
             {
                 path: '/addReview/:title',
                 element: <PrivateRoutes><AddReviews></AddReviews></PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/addReview/${params.title}`)
+                loader: ({ params }) => fetch(`https://love-lens-server.vercel.app/addReview/${params.title}`)
             },
             {
                 path: '/myReviews',
@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
             {
                 path: '/updateReview/:id',
                 element: <EditReview></EditReview>,
-                loader: ({ params }) => fetch(`http://localhost:5000/updateReview/${params.id}`)
+                loader: ({ params }) => fetch(`https://love-lens-server.vercel.app/updateReview/${params.id}`)
             },
             {
                 path: '/addServices',

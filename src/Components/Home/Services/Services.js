@@ -9,7 +9,7 @@ const Services = () => {
     const { setLoader } = useContext(AuthProvider)
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://love-lens-server.vercel.app/services')
             .then(res => res.json())
             .then(data => setServices(data))
             .finally(() => setLoader(false))

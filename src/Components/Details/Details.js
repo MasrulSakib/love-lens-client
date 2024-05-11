@@ -10,7 +10,7 @@ const Details = () => {
     const { image, description, title, price, rating } = serviceDetails;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews/${title}`)
+        fetch(`https://love-lens-server.vercel.app/reviews/${title}`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [title])
