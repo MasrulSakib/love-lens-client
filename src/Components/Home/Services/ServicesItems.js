@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import toast from 'react-hot-toast';
 
 
 const ServicesItems = ({ service }) => {
@@ -12,12 +13,12 @@ const ServicesItems = ({ service }) => {
         // Check if item is already in localStorage
         const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
         if (!cartItems.find(item => item._id === _id)) {
-            alert('Service added successfully')
+            toast.success('Service added successfully')
             cartItems.push({ _id, title, price, image, description });
             localStorage.setItem('cartItems', JSON.stringify(cartItems));
         }
         else {
-            alert('Service already exist')
+            toast.error('Service already exist')
         }
     };
 

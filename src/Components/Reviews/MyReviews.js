@@ -1,28 +1,41 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthProvider } from '../AuthContext/AuthContext';
 import MyReviewsItems from './MyReviewsItems';
+import toast from 'react-hot-toast';
 
 const MyReviews = () => {
-    const { users } = useContext(AuthProvider)
+    const { users, userLogout } = useContext(AuthProvider)
     const [reviews, setReviews] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myReviews?email=${users?.email}`)
-            .then(res => res.json())
+        fetch(`http://localhost:5000/myReviews?email=${users?.email}`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('Lens-Token')}`
+            }
+        })
+            .then(res => {
+                if (res.status === 401 || res.status === 403) {
+                    return userLogout()
+                }
+                return res.json()
+            })
             .then(data => setReviews(data))
-    }, [users?.email])
+    }, [users?.email, userLogout])
 
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete this review?')
         if (proceed) {
             fetch(`http://localhost:5000/myReviews/${id}`, {
                 method: 'DELETE',
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('Lens-Token')}`
+                }
 
             })
                 .then(res => res.json())
                 .then(data => {
                     if (data.deletedCount > 0) {
-                        alert('Deleted successfully');
+                        toast.success('Deleted successfully');
                         const remaining = reviews.filter(review => review._id !== id);
                         setReviews(remaining);
                     }

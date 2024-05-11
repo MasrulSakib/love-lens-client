@@ -4,6 +4,7 @@ import Header from '../Shared/Header/Header';
 import { Link } from 'react-router-dom';
 import { AuthProvider } from '../AuthContext/AuthContext';
 import Footer from '../Footer/Footer';
+import { verifyJwt } from '../../VerifyJWT/VerifyJwt';
 
 const Register = () => {
     const { userSignUp } = useContext(AuthProvider)
@@ -20,6 +21,7 @@ const Register = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                verifyJwt(user)
             })
             .catch(error => console.error(error))
 

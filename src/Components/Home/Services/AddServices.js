@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import toast from 'react-hot-toast';
 
 const AddServices = () => {
     const [cartItems, setCartItems] = useState([]);
@@ -12,6 +13,7 @@ const AddServices = () => {
     const handleDelete = (_id) => {
         // Filter out the item with the specified _id
         const updatedCart = cartItems.filter(item => item._id !== _id);
+        toast.success('Service removed successfully')
         // Update localStorage and state with the updated cart items
         localStorage.setItem('cartItems', JSON.stringify(updatedCart));
         setCartItems(updatedCart); // Update state to reflect the removal

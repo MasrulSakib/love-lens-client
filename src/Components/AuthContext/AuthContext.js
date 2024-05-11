@@ -27,7 +27,7 @@ const AuthContext = ({ children }) => {
     }
 
     const userLogout = () => {
-        setLoader(true)
+        localStorage.removeItem('Lens-Token');
         return signOut(auth);
     }
 

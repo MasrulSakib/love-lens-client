@@ -1,4 +1,5 @@
 import React from 'react';
+import toast from 'react-hot-toast';
 import { useLoaderData } from 'react-router-dom';
 
 const EditReview = () => {
@@ -20,6 +21,7 @@ const EditReview = () => {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('Lens-Token')}`
             },
             body: JSON.stringify(updatedReview),
         })
@@ -28,7 +30,7 @@ const EditReview = () => {
             .then(data => {
                 console.log(data)
                 if (data.modifiedCount > 0) {
-                    alert('Your Review updated successfully')
+                    toast.success('Your Review updated successfully')
                 }
             })
             .catch(error => console.error(error))
