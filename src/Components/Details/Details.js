@@ -3,12 +3,13 @@ import { Link, useLoaderData } from 'react-router-dom';
 import Reviews from '../Reviews/Reviews';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import useTitle from '../../Hooks/useTitle';
 
 const Details = () => {
     const [reviews, setReviews] = useState([]);
     const serviceDetails = useLoaderData();
     const { image, description, title, price, rating } = serviceDetails;
-
+    useTitle('Details & Reviews')
     useEffect(() => {
         fetch(`https://love-lens-server.vercel.app/reviews/${title}`)
             .then(res => res.json())

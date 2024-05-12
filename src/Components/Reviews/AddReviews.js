@@ -2,11 +2,13 @@ import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthProvider } from '../AuthContext/AuthContext';
 import toast from 'react-hot-toast';
+import useTitle from '../../Hooks/useTitle';
 
 const AddReviews = () => {
     const AllReviews = useLoaderData()
     const { _id } = AllReviews;
     const { users } = useContext(AuthProvider)
+    useTitle('Add Reviews')
 
     const handleSubmit = event => {
         event.preventDefault()

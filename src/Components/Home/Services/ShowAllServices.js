@@ -2,10 +2,12 @@ import React, { useContext, useEffect, useState } from 'react';
 import ServicesItems from './ServicesItems';
 import { AuthProvider } from '../../AuthContext/AuthContext';
 import video from '../../../Assets/Video/87806-601467089_small.mp4'
+import useTitle from '../../../Hooks/useTitle';
 
 const ShowAllServices = () => {
     const [allServices, setAllServices] = useState([]);
     const { setLoader } = useContext(AuthProvider);
+    useTitle('Services')
 
     useEffect(() => {
         fetch('https://love-lens-server.vercel.app/allServices')

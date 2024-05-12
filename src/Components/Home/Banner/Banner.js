@@ -6,8 +6,10 @@ import headerImg1 from '../../../Assets/NavImg/wedding-trends-01.jpg'
 import headerImg2 from '../../../Assets/NavImg/wedding-trends-02.jpg'
 import headerImg3 from '../../../Assets/NavImg/wedding-trends-03.jpg'
 import headerImg4 from '../../../Assets/NavImg/wedding-trends-04.jpg'
+import useTitle from '../../../Hooks/useTitle';
 
 const Banner = () => {
+    useTitle('Home');
 
     return (
         <Carousel>

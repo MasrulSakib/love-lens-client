@@ -1,0 +1,155 @@
+[33mcommit 65e7365a08e73b20c557d745d1d34339aea7f099[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Masrul_Sakib <Masrul.Sakib69@gmail.com>
+Date:   Sun May 12 05:04:28 2024 +0600
+
+    Update README.md
+
+[33mcommit 48f9e085f35185bcc8f26db173676e5ded8c94dc[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Sun May 12 05:03:10 2024 +0600
+
+    readme file updated with proper information
+
+[33mcommit 59c6ba5aa2eb32260da8f9767352f76b06ee3494[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Sun May 12 04:41:41 2024 +0600
+
+    firbase deploy and link replaced with vercel link
+
+[33mcommit 6cfd57003529d0009310af1bb9f4b031da2a717c[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Sun May 12 03:49:32 2024 +0600
+
+    JWT implemention applied for data security
+
+[33mcommit 1d26424c0f95b83fc42894e478dec1f6a7a87f01[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Sun May 12 01:08:53 2024 +0600
+
+    frequently asked questions component added on home
+
+[33mcommit b032a1422030066a3ad53cefb6334599baa527d2[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Sat May 11 23:15:10 2024 +0600
+
+    Blog component added
+
+[33mcommit 617c15a6b50979647574296ea6343d7d630f2f9e[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Sat May 11 22:48:39 2024 +0600
+
+    footer added
+
+[33mcommit edbafb171a080030daa63e665801c38842d6253b[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Sat May 11 22:09:06 2024 +0600
+
+    Services Cart added
+
+[33mcommit 4a6685b3c05a122e2797573b847d1a409f7985df[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Sat May 11 04:37:38 2024 +0600
+
+    user can now update review from my review route
+
+[33mcommit bc58c5cd51033c61829c0e01700de7c8443dcb1d[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Sat May 11 01:40:14 2024 +0600
+
+    user can now delete reviews from my Reviews section
+
+[33mcommit 73c9b71d5f8a125b76171559f6b0a5660561d188[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Fri May 10 23:31:09 2024 +0600
+
+    user can now see his/her reviews from my reviews section
+
+[33mcommit 5667e12744035d37c33acf494301b783a295eab0[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Fri May 10 18:08:27 2024 +0600
+
+    user can now add his/her reviews
+
+[33mcommit 9a3791c24b517192e4d1be33961429934c6053cb[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Fri May 10 04:16:45 2024 +0600
+
+    log out added and after login extra 2 routes added on header
+
+[33mcommit 20415f1652687a8602538af1ee550a0bb7db0648[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Fri May 10 00:32:49 2024 +0600
+
+    privateRoutes section added
+
+[33mcommit 5d1465e6b8cb33ac71347d06afc941b14789c074[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Thu May 9 21:42:12 2024 +0600
+
+    firebase authentication for login and google is done!!!
+
+[33mcommit d12116aedd3d60f7dcd738f54340b8961d2cebf4[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Thu May 9 21:12:30 2024 +0600
+
+    firebase authentication for signup is done!!!
+
+[33mcommit 3222178769fa8c7cabac5fc833c6661b01500960[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Thu May 9 20:47:48 2024 +0600
+
+    login and signup section and routes added
+
+[33mcommit 832819054759d36632b696dd2510a8df3b98a9af[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Thu May 9 18:07:15 2024 +0600
+
+    react photo views added on services, reviews and details section
+
+[33mcommit f836ab1739f22a762e67255bd299899ebf113667[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Thu May 9 05:11:49 2024 +0600
+
+    Reviews section added
+
+[33mcommit 1d7652a30a85b1703b4cb205ce7ac3f5ca69030e[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Thu May 9 02:09:01 2024 +0600
+
+    Details section added and service details added
+
+[33mcommit e88a5db3e37aa9d11e43b38e04503b7637b2b3bf[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Thu May 9 01:36:35 2024 +0600
+
+    services routes added for all services
+
+[33mcommit 81df11e4bda5f6766d3d09b4ca28bf3d60ab0bcd[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Wed May 8 22:48:30 2024 +0600
+
+    firebase data secured and my services section
+
+[33mcommit 136af36b2d7205100f2c490eab7d0248c9f7012e[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Wed May 8 17:59:11 2024 +0600
+
+    About me section added on home
+
+[33mcommit 93137e8e25c5653a39537bfa54795972f01e2e48[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Wed May 8 15:07:57 2024 +0600
+
+    Banner added in home route
+
+[33mcommit b04ff8e4b7e7f531596570ce02f68c7fa5b357b0[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Tue May 7 23:55:29 2024 +0600
+
+    Header added
+
+[33mcommit 9db71bcf04e84550e2a158351d5c3b4c86553153[m
+Author: MasrulSakib <Masrul.Sakib69@gmail.com>
+Date:   Tue May 7 18:11:21 2024 +0600
+
+    Initialize project using Create React App

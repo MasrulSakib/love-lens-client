@@ -5,9 +5,11 @@ import { Link } from 'react-router-dom';
 import { AuthProvider } from '../AuthContext/AuthContext';
 import Footer from '../Footer/Footer';
 import { verifyJwt } from '../../VerifyJWT/VerifyJwt';
+import useTitle from '../../Hooks/useTitle';
 
 const Register = () => {
     const { userSignUp } = useContext(AuthProvider)
+    useTitle('Register')
 
     const handleSubmit = (event) => {
         event.preventDefault();

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
+import useTitle from '../../../Hooks/useTitle';
 
 const AddServices = () => {
     const [cartItems, setCartItems] = useState([]);
+    useTitle('Services Cart')
 
     // Load cart items from localStorage on component mount
     useEffect(() => {

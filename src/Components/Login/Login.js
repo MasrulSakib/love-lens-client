@@ -6,6 +6,7 @@ import { AuthProvider } from '../AuthContext/AuthContext';
 import { GoogleAuthProvider } from 'firebase/auth';
 import Footer from '../Footer/Footer';
 import { verifyJwt } from '../../VerifyJWT/VerifyJwt';
+import useTitle from '../../Hooks/useTitle';
 
 const googleProvider = new GoogleAuthProvider();
 
@@ -14,6 +15,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location?.state?.from?.pathname || '/';
+    useTitle('Login');
 
     const handleSubmit = (event) => {
         event.preventDefault();

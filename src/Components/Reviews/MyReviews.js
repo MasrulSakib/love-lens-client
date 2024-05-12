@@ -2,10 +2,12 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthProvider } from '../AuthContext/AuthContext';
 import MyReviewsItems from './MyReviewsItems';
 import toast from 'react-hot-toast';
+import useTitle from '../../Hooks/useTitle';
 
 const MyReviews = () => {
     const { users, userLogout } = useContext(AuthProvider)
     const [reviews, setReviews] = useState([])
+    useTitle('My Reviews')
 
     useEffect(() => {
         fetch(`https://love-lens-server.vercel.app/myReviews?email=${users?.email}`, {

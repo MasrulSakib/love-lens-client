@@ -1,9 +1,11 @@
 import React from 'react';
 import toast from 'react-hot-toast';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../Hooks/useTitle';
 
 const EditReview = () => {
     const updateReview = useLoaderData()
+    useTitle('Edit Review')
     const { _id } = updateReview;
 
     const handleSubmit = event => {
